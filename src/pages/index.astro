@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ExamList from '../components/ExamList';
+import CategoryList from '../components/category/CategoryList';
+---
+
+<Layout title="سامانه آزمون آنلاین">
+  <div class="space-y-8">
+    <section class="text-center py-12 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl">
+      <h1 class="text-4xl font-bold mb-4">سامانه جامع آزمون آنلاین</h1>
+      <p class="text-xl">برگزاری آزمون‌های آنلاین با پیشرفته‌ترین امکانات</p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-8">
+      <div class="card">
+        <h2 class="text-2xl font-bold mb-4">آزمون‌های اخیر</h2>
+        <!-- <ExamList client:load /> -->
+      </div>
+      
+      <div class="card">
+        <h2 class="text-2xl font-bold mb-4">دسته‌بندی‌ها</h2>
+        <CategoryList client:load />
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .card {
+    @apply bg-white rounded-lg p-6 shadow-sm;
+  }
+</style>

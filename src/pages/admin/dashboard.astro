@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/AdminLayout.astro';
+import DashboardStats from '../../components/admin/DashboardStats';
+import RecentExams from '../../components/admin/RecentExams';
+import RecentPayments from '../../components/admin/RecentPayments';
+---
+
+<Layout title="پنل مدیریت">
+  <div class="space-y-6">
+    <h1 class="text-2xl font-bold">داشبورد مدیریت</h1>
+    
+    <DashboardStats client:load />
+    
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-4">آزمون‌های اخیر</h2>
+        <RecentExams client:load />
+      </div>
+      
+      <div class="card">
+        <h2 class="text-xl font-semibold mb-4">پرداخت‌های اخیر</h2>
+        <RecentPayments client:load />
+      </div>
+    </div>
+  </div>
+</Layout>

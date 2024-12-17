@@ -1,0 +1,18 @@
+```astro
+---
+import Layout from '../../layouts/Layout.astro';
+import PaymentVerification from '../../components/payment/PaymentVerification';
+
+const { authority, exam_id } = Astro.url.searchParams;
+---
+
+<Layout title="تایید پرداخت">
+  <div class="max-w-md mx-auto">
+    <PaymentVerification
+      client:load
+      authority={authority}
+      examId={parseInt(exam_id)}
+    />
+  </div>
+</Layout>
+```

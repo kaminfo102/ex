@@ -1,0 +1,18 @@
+---
+import Layout from '../../../layouts/AdminLayout.astro';
+import QuestionList from '../../../components/admin/questions/QuestionList';
+---
+
+<Layout title="مدیریت سوالات">
+  <div class="space-y-6">
+    <div class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold">مدیریت سوالات</h1>
+      <a href="/admin/questions/create" class="btn-primary">
+        افزودن سوال جدید
+      </a>
+    </div>
+    
+    <QuestionList client:load />
+  </div>
+</Layout>
+---

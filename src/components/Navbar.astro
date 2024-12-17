@@ -1,0 +1,30 @@
+---
+const navItems = [
+  { title: 'صفحه اصلی', href: '/' },
+  { title: 'آزمون‌ها', href: '/exams' },
+  { title: 'دسته‌بندی‌ها', href: '/categories' },
+  { title: 'ورود', href: '/login' },
+  { title: 'ثبت‌نام', href: '/register' },
+];
+---
+
+<nav class="bg-white shadow-md">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center space-x-4 space-x-reverse">
+        <a href="/" class="text-2xl font-bold text-blue-600">آزمون‌یار</a>
+      </div>
+      
+      <div class="hidden md:flex items-center space-x-4 space-x-reverse">
+        {navItems.map(item => (
+          <a
+            href={item.href}
+            class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+          >
+            {item.title}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</nav>

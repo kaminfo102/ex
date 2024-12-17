@@ -1,0 +1,12 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ExamTaking from '../../../components/exam/ExamTaking';
+
+const { id } = Astro.params;
+---
+
+<Layout title="آزمون">
+  <div class="max-w-4xl mx-auto">
+    <ExamTaking client:load examId={parseInt(id)} />
+  </div>
+</Layout>

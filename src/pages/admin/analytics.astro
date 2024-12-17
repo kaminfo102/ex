@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/AdminLayout.astro';
+import ExamAnalytics from '../../components/admin/analytics/ExamAnalytics';
+import UserAnalytics from '../../components/admin/analytics/UserAnalytics';
+import PaymentAnalytics from '../../components/admin/analytics/PaymentAnalytics';
+---
+
+<Layout title="تحلیل‌های آماری">
+  <div class="space-y-8">
+    <h1 class="text-2xl font-bold">تحلیل‌های آماری</h1>
+    
+    <div class="space-y-8">
+      <section>
+        <h2 class="text-xl font-semibold mb-4">تحلیل آزمون‌ها</h2>
+        <ExamAnalytics client:load />
+      </section>
+      
+      <section>
+        <h2 class="text-xl font-semibold mb-4">تحلیل کاربران</h2>
+        <UserAnalytics client:load />
+      </section>
+      
+      <section>
+        <h2 class="text-xl font-semibold mb-4">تحلیل پرداخت‌ها</h2>
+        <PaymentAnalytics client:load />
+      </section>
+    </div>
+  </div>
+</Layout>
